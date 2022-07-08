@@ -16,6 +16,16 @@ const CategoryController = {
     },
 
 
+    async getCategories(req, res) {
+        try {
+            const categories = await Category.find()
+            return res.status(200).json(categories)
+        } catch (err) {
+            return res.status(400).json(err)
+        }
+    },
+
+
     async updateCategory(req, res) {
 
         const bodyData = req.body

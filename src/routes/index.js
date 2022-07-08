@@ -33,7 +33,7 @@ routes.get('/:user_id/carts', CartController.getUserCarts)
 routes.get('/carts/:user_id/:cart_id', CartController.getCart)
 
 routes.post('/category', CategoryController.createCategory)
-
+routes.get('/category',CategoryController.getCategories)
 
 
 module.exports = routes
